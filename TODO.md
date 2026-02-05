@@ -14,5 +14,6 @@ Some steps are not yet configured within [chezmoi.io](https://chezmoi.io/); ulti
 - iCloud / GDrive is not installed
 - Docker is not installed
 - Little Snitch is not installed
+- GCloud and components are not installed
 - Various system configurations/preferences are not set
 
