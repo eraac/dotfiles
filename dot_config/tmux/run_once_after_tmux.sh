@@ -1,10 +1,10 @@
 #!/bin/zsh
 
-path="~/.config/tmux/plugins/tpm-redux"
+tpm_path="${HOME}/.config/tmux/plugins/tpm-redux"
 
 # Install the Tmux Plugins Manager
-git clone https://github.com/RyanMacG/tpm-redux.git ${path}
+git clone https://github.com/RyanMacG/tpm-redux.git ${tpm_path}
 
 # Install the plugins
-./${path}/bin/install
+${tpm_path}/bin/install
 
