@@ -20,9 +20,15 @@ if command -v kubectl > /dev/null 2>&1; then
 		# replace kubectl, with kubecolor
 		alias kubectl="kubecolor"
 	fi
-fi
 
-# shortcuts to create pods in Kubernetes cluster
-alias debug-kubernetes="kubectl run -it --rm --restart=Never busybox --image=praqma/network-multitool /bin/ash"
-alias debug-kubernetes-gcloud="kubectl run -it --rm --restart=Never busybox --image=google/cloud-sdk /bin/bash"
+	# Use the gcloud plugin for GKE
+	# https://cloud.google.com/blog/products/containers-kubernetes/kubectl-auth-changes-in-gke
+	# Install:
+	# - gcloud components install gke-gcloud-auth-plugin
+	export USE_GKE_GCLOUD_AUTH_PLUGIN=True
+
+	# shortcuts to create pods in Kubernetes cluster
+	alias debug-kubernetes="kubectl run -it --rm --restart=Never busybox --image=praqma/network-multitool /bin/ash"
+	alias debug-kubernetes-gcloud="kubectl run -it --rm --restart=Never busybox --image=google/cloud-sdk /bin/bash"
+fi
 
