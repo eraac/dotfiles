@@ -1,0 +1,4 @@
+# Configure a cache for the plugins to avoid unnecessary network calls
+# This repository can become very large (> 50 GB); it's safe to clean with "rm -rf", but keep the directory
+plugin_cache_dir = "$HOME/.terraform.d/plugin-cache"
+
