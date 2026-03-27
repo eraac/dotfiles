@@ -28,7 +28,13 @@ function git_done()
 	branch=$(git branch --show-current)
 	git checkout main
 	git pull
-	git branch -d ${branch}
+
+	delete_flag="-d"
+	if [[ "$branch" == renovate/* ]]; then
+		delete_flag="-D" # just remove the branch if it comes from Renovate 
+	fi
+
+	git branch ${delete_flag} ${branch}
 }
 
 # shortcut to add all files, commit with message '$1' then push
