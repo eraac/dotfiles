@@ -20,3 +20,9 @@ function loc()
     find . -name "*.${@}" | xargs wc -l
 }
 
+# re-run previous command with a watch
+function watch_last()
+{
+	watch -n 1 -c "${history[@][1]}"
+}
+
