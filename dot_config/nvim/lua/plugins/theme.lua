@@ -3,7 +3,7 @@ return {
 
     {
         'shaunsingh/nord.nvim',
-        lazy = true,
+        lazy = false,
         priority = 1000,
         config = function ()
             vim.g.nord_italic = false
@@ -14,7 +14,7 @@ return {
 
     {
         'marko-cerovac/material.nvim',
-        lazy = false,
+        lazy = true,
         priority = 1000,
         config = function ()
             vim.g.material_style = "oceanic" -- or darker, lighter oceanic, palenight, deep ocean
