@@ -18,7 +18,7 @@ if command -v kubectl > /dev/null 2>&1; then
 		compdef kubecolor=kubectl
 
 		# replace kubectl, with kubecolor
-		alias kubectl="kubecolor"
+		alias kubectl="kubecolor --force-colors"
 	fi
 
 	# Use the gcloud plugin for GKE
