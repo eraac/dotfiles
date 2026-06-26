@@ -54,9 +54,20 @@ vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '☠', eol = '¬' }
 -- See `:help 'confirm'`
 vim.opt.confirm = true
 
+-- the status line is always and ONLY on the last window
+vim.opt.laststatus = 3
+
 vim.opt.completeopt = { "menu", "menuone", "noselect" }
 
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>', { desc = "Clear highlights on search when pressing <Esc>" }) -- or the command ':noh'
 vim.keymap.set('n', '<Tab>', '<C-W>w', { desc = 'Move to next window with Tab' })
 vim.keymap.set('n', '<S-Tab>', '<C-w>W', { desc = 'Move to previous window with Tab' })
+
+vim.filetype.add({
+	pattern = {
+		[".*%.yaml%.j2"] = "yaml",
+		[".*%.yaml%.tpl"] = "yaml",
+		[".*%.md%.tpl"] = "markdown",
+	},
+})
 
