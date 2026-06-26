@@ -16,4 +16,5 @@ Some steps are not yet configured within [chezmoi.io](https://chezmoi.io/); ulti
 - Little Snitch is not installed
 - GCloud and components are not installed
 - Various system configurations/preferences are not set
+- Git configuration is not backup
 
