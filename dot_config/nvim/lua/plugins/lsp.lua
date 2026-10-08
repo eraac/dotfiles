@@ -20,5 +20,5 @@ return {
 }
 
 -- Usage:
--- ':LspStart xxx' to start lsp servers
+-- ':lsp enable xxx' to start lsp servers
 

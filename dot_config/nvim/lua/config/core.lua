@@ -65,9 +65,13 @@ vim.keymap.set('n', '<S-Tab>', '<C-w>W', { desc = 'Move to previous window with 
 
 vim.filetype.add({
 	pattern = {
-		[".*%.yaml%.j2"] = "yaml",
-		[".*%.yaml%.tpl"] = "yaml",
+		[".*%.ya?ml%.j2"] = "yaml",
+		[".*%.ya?ml%.tpl"] = "yaml",
 		[".*%.md%.tpl"] = "markdown",
+		[".*%.sh%.j2"] = "bash",
+		[".*%.ini%.j2"] = "dosini",
+		[".*%.service%.j2"] = "dosini",
+		[".*%.service"] = "dosini",
 	},
 })
 

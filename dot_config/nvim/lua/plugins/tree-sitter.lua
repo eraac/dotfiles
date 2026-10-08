@@ -3,9 +3,12 @@ return {
     lazy = false,
     build = ':TSUpdate',
     opts = {
+        -- :TSInstall <parser>
         ensure_installed = {
             "hcl",
             "terraform",
+            "yaml",
+            "ini",
         },
     },
     config = function()
@@ -15,7 +18,7 @@ return {
     end
 }
 
--- Usage fole
+-- Usage fold
 -- zo: Open one fold under the cursor
 -- zO: Open all folds under the cursor
 -- zc: Close one fold under the cursor
