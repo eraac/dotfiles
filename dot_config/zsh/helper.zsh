@@ -3,6 +3,8 @@
 alias ll="ls -la"
 alias ls='ls -GFh'
 
+alias bard="agy" # alias for antigravity-cli
+
 # install: brew install ccat
 if command -v ccat > /dev/null 2>&1; then
 	alias cat="ccat" # better cat
@@ -11,6 +13,10 @@ fi
 # install: brew install coreutils
 if command -v gdate > /dev/null 2>&1; then
 	alias date="gdate" # replace shitty date from MacOS
+fi
+
+if command -v gsed > /dev/null 2>&1; then
+	alias sed="gsed" # replace shitty sed from MacOS
 fi
 
 # count number of line of code for a specific file extension

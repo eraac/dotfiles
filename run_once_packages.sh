@@ -5,6 +5,7 @@ brew bundle --file=/dev/stdin <<EOF
 brew "neovim"
 brew "tmux"
 cask "ghostty"
+cask "antigravity-cli"
 
 # Programming
 brew "go"
