@@ -29,6 +29,7 @@ The following manual installations and configuration tasks are not yet automated
 - Untracked configuration files:
   - `~/.ssh/config` references files in `~/.config/ssh/*`, which are not tracked in this repository
   - `~/.config/git/work` (work-specific Git configuration) is not tracked in this repository
+  - `~/.config/git/personal` (personal-specific Git configuration) is not tracked in this repository
   - `~/.config/zsh/work` (work-specific ZSH configuration) is not tracked in this repository
 
 ## Documentation
@@ -90,7 +91,7 @@ SSH and GPG keys are stored securely in a KeePass database.
 
 ### Git Configuration
 
-Work identity must be configured in `~/.config/git/work`:
+Work identity must be configured in `~/.config/git/work` and `~/.config/git/personal`:
 
 ```ini
 [user]
