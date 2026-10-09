@@ -1,0 +1,35 @@
+[push]
+	default = simple
+	followTags = true
+	autoSetupRemote = true
+
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	required = true
+	process = git-lfs filter-process
+
+[alias]
+	ch = checkout
+	br = branch
+	co = commit -s
+	st = status
+
+[http]
+	postBuffer = 2M
+
+[pull]
+	rebase = false
+
+[commit]
+	gpgsign = true
+
+[init]
+	defaultBranch = main
+
+[includeIf "gitdir:~/work/"]
+	path = ~/.config/git/work
+
+[includeIf "gitdir:~/personal/"]
+	path = ~/.config/git/personal
+
