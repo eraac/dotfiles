@@ -131,7 +131,7 @@ Authenticate user and application default credentials:
 
 ```sh
 gcloud auth login
-gcloud application default login
+gcloud auth application-default login
 ```
 
 ---
