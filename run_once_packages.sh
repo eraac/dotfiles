@@ -13,14 +13,16 @@ brew "go"
 brew "d2"
 brew "k6"
 brew "task"
+brew "chezmoi"
 
 ## Tools - IaC
 brew "ansible"
 brew "ansible-lint"
-brew "terraform"
 brew "terraform-docs"
-brew "packer"
-cask "hashicorp-vagrant"
+tap "hashicorp/tap"
+brew "hashicorp/tap/terraform"
+brew "hashicorp/tap/packer"
+brew "hashicorp/tap/hashicorp-vagrant"
 
 ## Tools - Kubernetes
 brew "kubernetes-cli"
@@ -39,8 +41,13 @@ brew "jq"
 brew "yq"
 brew "wget"
 brew "telnet"
-brew "fzf"
 brew "chrome-cli"
+brew "gnupg"
+brew "pinentry-mac"
+
+# Utils - NeoVim
+brew "fzf"
+brew "ripgrep"
 
 # Software
 cask "utm" # virtualization
@@ -49,4 +56,6 @@ cask "docker-desktop"
 cask "telegram-desktop"
 
 EOF
+
+gcloud components install gke-gcloud-auth-plugin
 
